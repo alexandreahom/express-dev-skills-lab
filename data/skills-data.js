@@ -1,9 +1,10 @@
 const skills = [
   {text: 'Swimming', done: true },
-  {text: 'Snowboarding', done: false},
+  {text: 'Snowboarding', done: true},
   {text: 'Gaming', done: true },
+  {text: 'Drawing', done: false},
   {text: 'Streaming', done: true},
-  {text: 'Typing', done: false},
+  {text: 'Roller Skating', done: false},
 ]
 
 export { 
