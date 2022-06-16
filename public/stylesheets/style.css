@@ -1,10 +1,21 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: rgb(51, 6, 45);
+  font-size: larger;
+  text-align: center;
 }
 
 a {
-  color: #00B7FF;
+  color: aquamarine;
+}
+
+h1 {
+  color: aquamarine;
+}
+
+ul {
+  color: azure;
 }
 
 .delete-form {
@@ -13,9 +24,10 @@ a {
 }
 	
 .delete-form button {
-  color: red;
+  color: rgb(255, 0, 0);
 }
 	
 li {
   list-style: none;
 }
+
