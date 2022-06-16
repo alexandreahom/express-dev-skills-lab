@@ -3,6 +3,7 @@ import express from 'express'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import logger from 'morgan'
+import methodOverride from 'method-override'
 import "dotenv/config.js"
 import('./config/database.js')
 
@@ -21,6 +22,13 @@ app.set(
 app.set('view engine', 'ejs')
 
 // middleware
+app.use(function(req, res, next) {
+  console.log('Hello SEI!')
+  // Add a time property to the req object
+  req.time = new Date().toLocaleTimeString()
+  next()
+})
+
 app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
@@ -29,6 +37,7 @@ app.use(
     path.join(path.dirname(fileURLToPath(import.meta.url)), 'public')
   )
 )
+app.use(methodOverride('_method'))
 
 // mounted routers
 app.use('/', indexRouter)
